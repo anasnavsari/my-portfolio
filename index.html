@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasnavsari</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+    *{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+       background-color:rgb(228, 212, 243);
+        text-decoration: none;
+        font-style:italic;
+        color: rgb(0, 0, 0);
+    }
+    
+    .navigation{
+        background-color:rgb(228, 205, 250);
+        display: flex;
+       justify-content: space-around;
+       align-items: center;
+        }
+        a{
+            background-color:rgb(228, 205, 250);
+        }
+        a:hover{
+        transition: all o.5s ease 0.5s;
+        transform: scale(1.5,1.5);
+        background-color:  rgb(210, 210, 255);
+    }
+   
+
+    .fa-brands {font-size:xx-large; margin-left: 5px;}
+    .fa-regular{font-size:xx-large; margin-left: 5px;}
+    .fa-brands:hover{
+        transition: all 0.5s ease 0.5s;
+        transform: scale(1.2,1.2);
+        background-color:  rgb(210, 210, 255);
+    }
+    .fa-regular:hover{
+        transition: all 1s ease 1s;
+        transform: scale(1.2,1.2);
+        background-color:  rgb(210, 210, 255);
+    }
+    .p{
+        display: flex;
+        flex-direction: column;
+    }
+    .intro{
+        display: flex;
+        margin-top: 5vh;
+        display: flex;
+       justify-content: space-around;
+       border: 2px dotted blueviolet;
+       border-radius: 10px;
+    }  
+   
+    .anasimg{
+       
+        width: 40vw;
+        height: 40vh;
+        border-radius:100%;
+    }
+    #hirebutton{
+        font-size:x-large;
+        margin-top: 10vh;
+    }
+    #hirebutton:hover{
+        transition: all 0.5s ease 0.5s;
+        transform: scale(1.1,1.1);
+        background-color:  rgb(210, 210, 255);
+    }
+   
+    
+    .aboutme{
+        border: 2px dotted blueviolet;
+        border-radius: 10px;
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .dev{
+        height:45vh;
+        width: 40vw;
+        border-radius: 20px;
+    }
+    #Downloadcv{
+        font-size: x-large;
+         margin-top: 5vh;
+        }
+     #Downloadcv:hover{
+        transition: all 0.5s ease 0.5s;
+        transform: scale(1.1,1.1);
+        background-color:  rgb(210, 210, 255);
+    }
+
+
+    .myskills{
+        border: 2px dotted blueviolet;
+        border-radius: 10px;
+        margin-top: 10vh;}
+    .marquee{
+        margin-top: 10vh;
+        background-color: rgb(210, 210, 255);
+        border: 2px solid blueviolet;
+    }
+    .marquee img{
+        margin-left: 10vw;
+        border: 3px dotted blueviolet;
+    }
+    .marquee img:hover{
+        transition: all 1s ease 1s;
+        transform: scale(1.1,1.1);
+        background-color:  rgb(210, 210, 255);
+    }
+    .myservices{margin-top: 10vh;}
+    .cardcontainer{
+        margin: top 10vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+    }
+    .card i{ margin-top: 2vh;}
+    .card i:hover{
+        transition: all 1s ease 1s;
+        transform: scale(1.1,1.1);
+        background-color:  rgb(210, 210, 255);
+    }
+    .card{
+        width: 200px;
+        text-align: center;
+        margin: 2vh;
+        border: 2px dotted blueviolet;
+        border-radius: 25px;
+        background-color: rgb(228, 199, 255);
+    }
+    .card:hover{
+        transition: all 0.3s ease 0.3s;
+        transform: scale(1.1,1.1);
+        background-color:  rgb(210, 210, 255);
+    }
+
+    
+
+    .contactme{
+        padding: 10px;
+        border: 2px dotted blueviolet;
+        border-radius:25px;
+        margin-bottom: 5vh;
+        background-color: rgb(228, 199, 255);
+    }
+</style>
+
+
+
+
+</head>
+<body>
+<div class="navigation">
+    <div class="nav">  
+        <a href="index.html"><h2>portfolio.</h2></a>
+    </div>   
+        <a href="#aboutme">About me</a>
+        <a href="#skills">Skills</a>
+        <a href="">Services</a>
+        <a href="">Contact</a>
+    </div>
+  
+</div>
+
+<div class="p">
+    
+    <div class="intro">
+      <div class="hello"> 
+        <h3>Hello </h3>
+        <h1> I'M  ANASMEHDI</h1>
+        <h2>Full Stack Developer</h2>
+        <h3>Form Gujarat.</h3></div>
+
+        <div class="anasimage">
+            <img src="src/img/anas.jpeg" alt="anasimg" class="anasimg" >      
+         </div>
+    </div>
+   
+<center>
+    <button id="hirebutton">Hire Me</button>
+    <div class="aboutme" id="aboutme">
+       
+        <h3>Development in my passion</h3>
+        <center> <img src="src/img/dev.gif" alt="dev" class="dev"></center>
+       
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa labore rerum culpa, natus, enim vero sint ex sequi fuga eligendi dicta nostrum distinctio maiores ut!</p>
+       
+    </div>
+    <a href="src/Anas Navsari  resume.pdf" download > <button id="Downloadcv"> Download  Curriculum Vitae </button></a>
+    
+   
+</center>
+</div>
+<center>
+    <div class="myskills" id="skills">
+        <h2>My Skills</h2>
+        <h3>Skills Reflects our Knowlwdge</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, vero.</p>
+        <h1>1 Year of Experience</h1>
+    </div>
+
+        <marquee class="marquee">
+            <img src="src/img/HTML5.png" alt="HTML5" height="80vh">
+            <img src="src/img/css.png" alt="css" height="80vh">
+            <img src="src/img/js.png" alt="js" height="80vh">
+            <img src="src/img/bootstrap.png" alt="bootstrap" height="80vh">
+            <img src="src/img/c.png" alt="c" height="80vh">
+            <img src="src/img/c++.png" alt="c++" height="80vh">
+            <img src="src/img/Java.png" alt="Java" height="80vh">
+            <img src="src/img/mongodb.png" alt="mongodb" height="80vh">
+            <img src="src/img/git.png" alt="github" height="80vh">
+           <img src="src/img/GitHubmarquee.png" alt="github" height="80vh">
+        </marquee>
+        
+   
+</center>
+<div class="myservices">
+    <center>
+    <h2>My Services</h2>
+
+
+    <div class="cardcontainer">
+        <div class="card">
+            <i class="fa-solid fa-computer"></i>
+            <h3>website Designing</h3>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis doloremque fugit quos pariatur aliquid delectus reprehenderit iusto labore nobis cupiditate rerum exercitationem sint maxime, earum velit dolore. Vero, eveniet consectetur!
+        </div>
+
+        <div class="card">
+            <i class="fa-brands fa-google"></i>
+           
+            <h3>Web Development</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eaque quae accusamus earum atque numquam vitae, ex alias! Molestias atque temporibus officiis aperiam dolorum vero dignissimos quasi officia maxime dolor!
+        </div>
+        <div class="card">
+            <i class="fa-regular fa-mobile"></i>
+            <h3>Mobile App Development</h3>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo officiis aperiam recusandae modi minima hic quas, cum neque assumenda dignissimos deleniti, beatae provident! Voluptas sequi libero expedita consequatur? Consequatur, aut.
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-paintbrush"></i>
+            <h3>graphic Design</h3>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus officia consectetur alias! Ipsum doloribus, ea accusantium ad, odit quos eum eius suscipit modi voluptatibus, voluptas impedit dolore? Saepe, nemo adipisci?
+        </div>
+       
+        <div class="card">
+            <i class="fa-solid fa-icons"></i>
+            <h3>Icon Design</h3>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto dolore, quibusdam voluptatum doloribus minima voluptatem illum veniam iure, in porro, velit temporibus ratione cumque. Provident possimus porro commodi pariatur nisi!
+        </div>
+        <div class="card">
+            <i class="fa-brands fa-slack"></i>
+            <h3>logo Design</h3>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed doloribus odio numquam fugiat laborum, qui doloremque tenetur necessitatibus quo non sunt, corrupti consectetur magnam dolores ab nam, quas amet? Consectetur?
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-video"></i>
+            <h3>Video Editing</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, nihil ducimus! Quo exercitationem repudiandae, voluptas aliquid facilis totam quasi est cupiditate hic unde velit, ducimus architecto, illo dolore. Quae, nulla!
+        </div>
+    </div>
+</div>
+</center>
+<div class="contactme">
+    <center>
+    <h2>Contact Me</h2>
+    <p>Want to get in touch?</p>
+  
+    <div class="socialicon">
+        <a href="https://github.com/anasnavsari" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href=https://www.linkedin.com/in/anasnavsari/
+       target="_blank" ><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/anasnavsari/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:anasnavsari04@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+        <a href="Https://wa.me/9313640952" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+   
+
+
+
+    <h3>Have any thing in mind ?</h3>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos laboriosam omnis molestias totam amet? Voluptas sapiente nihil nobis debitis unde ratione laborum soluta alias facilis.
+</div>
+</center>
+
+<div class="footer"></div>
+
+
+</body>
+</html>
