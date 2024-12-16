@@ -5,275 +5,677 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anasnavsari</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 <style>
-    *{
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-       background-color:rgb(228, 212, 243);
-        text-decoration: none;
-        font-style:italic;
-        color: rgb(0, 0, 0);
-    }
-    
-    .navigation{
-        background-color:rgb(228, 205, 250);
-        display: flex;
-       justify-content: space-around;
-       align-items: center;
-        }
-        a{
-            background-color:rgb(228, 205, 250);
-        }
-        a:hover{
-        transition: all o.5s ease 0.5s;
-        transform: scale(1.5,1.5);
-        background-color:  rgb(210, 210, 255);
-    }
    
+    body{
+      background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(151,41,247,1) 0%, rgba(24,22,39,1) 90% );
 
-    .fa-brands {font-size:xx-large; margin-left: 5px;}
-    .fa-regular{font-size:xx-large; margin-left: 5px;}
-    .fa-brands:hover{
-        transition: all 0.5s ease 0.5s;
-        transform: scale(1.2,1.2);
-        background-color:  rgb(210, 210, 255);
-    }
-    .fa-regular:hover{
-        transition: all 1s ease 1s;
-        transform: scale(1.2,1.2);
-        background-color:  rgb(210, 210, 255);
-    }
-    .p{
-        display: flex;
-        flex-direction: column;
-    }
-    .intro{
-        display: flex;
-        margin-top: 5vh;
-        display: flex;
-       justify-content: space-around;
-       border: 2px dotted blueviolet;
-       border-radius: 10px;
-    }  
-   
-    .anasimg{
-       
-        width: 40vw;
-        height: 40vh;
-        border-radius:100%;
-    }
-    #hirebutton{
-        font-size:x-large;
-        margin-top: 10vh;
-    }
-    #hirebutton:hover{
-        transition: all 0.5s ease 0.5s;
-        transform: scale(1.1,1.1);
-        background-color:  rgb(210, 210, 255);
-    }
-   
-    
-    .aboutme{
-        border: 2px dotted blueviolet;
-        border-radius: 10px;
-        margin-top: 10vh;
-        display: flex;
-        flex-direction: column;
-    }
-    .dev{
-        height:45vh;
-        width: 40vw;
-        border-radius: 20px;
-    }
-    #Downloadcv{
-        font-size: x-large;
-         margin-top: 5vh;
-        }
-     #Downloadcv:hover{
-        transition: all 0.5s ease 0.5s;
-        transform: scale(1.1,1.1);
-        background-color:  rgb(210, 210, 255);
-    }
+}
+nav{background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(90, 25, 146) 0%, rgba(24,22,39,1) 90% );
+}
+.intro{background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(90, 25, 146) 0%, rgba(24,22,39,1) 90% );
+}
 
-
-    .myskills{
-        border: 2px dotted blueviolet;
-        border-radius: 10px;
-        margin-top: 10vh;}
-    .marquee{
-        margin-top: 10vh;
-        background-color: rgb(210, 210, 255);
-        border: 2px solid blueviolet;
-    }
-    .marquee img{
-        margin-left: 10vw;
-        border: 3px dotted blueviolet;
-    }
-    .marquee img:hover{
-        transition: all 1s ease 1s;
-        transform: scale(1.1,1.1);
-        background-color:  rgb(210, 210, 255);
-    }
-    .myservices{margin-top: 10vh;}
-    .cardcontainer{
-        margin: top 10vh;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        
-    }
-    .card i{ margin-top: 2vh;}
-    .card i:hover{
-        transition: all 1s ease 1s;
-        transform: scale(1.1,1.1);
-        background-color:  rgb(210, 210, 255);
-    }
-    .card{
-        width: 200px;
-        text-align: center;
-        margin: 2vh;
-        border: 2px dotted blueviolet;
-        border-radius: 25px;
-        background-color: rgb(228, 199, 255);
-    }
-    .card:hover{
-        transition: all 0.3s ease 0.3s;
-        transform: scale(1.1,1.1);
-        background-color:  rgb(210, 210, 255);
-    }
-
-    
-
-    .contactme{
-        padding: 10px;
-        border: 2px dotted blueviolet;
-        border-radius:25px;
-        margin-bottom: 5vh;
-        background-color: rgb(228, 199, 255);
-    }
-</style>
-
-
-
-
-</head>
-<body>
-<div class="navigation">
-    <div class="nav">  
-        <a href="index.html"><h2>portfolio.</h2></a>
-    </div>   
-        <a href="#aboutme">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="">Services</a>
-        <a href="">Contact</a>
-    </div>
   
-</div>
+.img-fluid{
+ 
+ 
+  filter: grayscale(0.7) !important;
+  border-radius: 69% 31% 69% 31% / 47% 45% 55% 53% ;
+  background: rgb(41,26,116);
+background: linear-gradient(90deg, rgba(41,26,116,1) 0%, rgba(106,14,111,1) 50%, rgba(71,81,110,1) 100%);
+}
 
-<div class="p">
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+  --color: #560bad;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+button:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+button:active:before {
+  background: #970ea7;
+  transition: background 0s;
+}
+  h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+
+
+
+
+    skills-showcase {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #fefefe;
+    }
+
+    .skills-showcase h2 {
+      font-size: 2.5rem;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+
+    .skills-showcase p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .skills-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .skill-item {
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill-item h4 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .skill-item ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-item ul li {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-item ul li::before {
+      content: "✔";
+      color: #007bff;
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+
+    .cardcontainer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      position: relative;
+      width: 18rem;
+      border-radius: 15px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 
+                  0 0 15px #0099ff;
+    }
+
+    .card-img-top {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover .card-img-top {
+      transform: scale(1.1);
+    }
+
+    .card-body {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .card:hover .card-title {
+      color: #ff0080;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    myskills {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .myskills h2 {
+      font-size: 2.5rem;
+      color: #ff0080;
+      margin-bottom: 10px;
+    }
+
+    .myskills h3 {
+      font-size: 1.5rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .myskills p {
+      font-size: 1rem;
+      color: #777;
+      margin-bottom: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .myskills h1 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-top: 20px;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .skill-card {
+      width: 150px;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill-card img {
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .skill-card h4 {
+      font-size: 1.1rem;
+      color: #333;
+      text-align: center;
+      margin-top: 10px;
+    }
+   
+
+    .projects-section {
+      padding: 50px 20px;
+      
+      text-align: center;
+    }
+
+    .projects-section h2 {
+      font-size: 2.5rem;
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+
+    .projects-section p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .project-card {
+      
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card img {
+      
+      width: 80%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h4 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .project-card a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background-color: #ff6600;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      margin-right: 10px;
+    }
+
+    .project-card a:hover {
+      background-color: #cc5200;
+    }
+
+
+
+
     
-    <div class="intro">
-      <div class="hello"> 
-        <h3>Hello </h3>
-        <h1> I'M  ANASMEHDI</h1>
-        <h2>Full Stack Developer</h2>
-        <h3>Form Gujarat.</h3></div>
+    
+  
+    .contact-section h2 {
+      font-size: 2.5rem;
+      color: #ff6600;
+      
+    }
+  
+    .contact-section p {
+      font-size: 1rem;
+      color: #555;
+    
+    }
+  
+    .contact-form {
+     
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    .form-label {
+      font-weight: bold;
+      color: #333;
+    }
+  
+    .form-input {
+      border-radius: 8px;
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+  
+    .form-input:focus {
+      border-color: #ff6600;
+      box-shadow: 0 0 5px rgba(255, 102, 0, 0.3);
+    }
+  
+    .btn-primary {
+      background-color: #ff6600;
+      border-color: #ff6600;
+      transition: all 0.3s ease;
+    }
+  
+    .btn-primary:hover {
+      background-color: #cc5200;
+      border-color: #cc5200;
+    }
+  
+    /* Center the form and ensure responsive design */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+   
+</style>
+</head>
+<body >
 
-        <div class="anasimage">
-            <img src="src/img/anas.jpeg" alt="anasimg" class="anasimg" >      
+<nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark">
+  <div class="container-fluid text-light ">
+    <a class="navbar-brand fs-1 text-light" href="index.html" > Portfolio .</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link active text-light fs-5" aria-current="page" href="#aboutme" >About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light fs-5" href="#skills">My Skills</a>
+        </li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link dropdown-toggle fs-5 text-light ." href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Contact Me
+          </a>
+          <ul class="dropdown-menu fs-1 text-center bg-transparent">
+            <li><a href="https://github.com/anasnavsari" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href=https://www.linkedin.com/in/anasnavsari/
+                target="_blank" ><i class="fa-brands fa-linkedin"></i></a></li>
+             <li><a href="mailto:anasnavsari04@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
+                <li><a href="Https://wa.me/9313640952" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://www.instagram.com/anasnavsari/" target="_blank"><i class="fa-brands fa-instagram" ></i></a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<div class="container ">    
+
+
+<div class="p ">
+    
+    <div class="intro  d-flex justify-content-around border border-light-subtle text-light border-2  m-auto mt-5 ">
+      <div class="hello mt-5 "> 
+        <h2  class="text-light text-start">Hello !</h2>
+            <h1> I'M  ANASMEHDI</h1>
+            <h2 class="text-light  text-start">Full Stack Developer</h2>
+            <h3>Form Gujarat.</h3>
+            <a class="" href="Https://wa.me/9313640952" target="_blank"> <button id="hirebutton">Hire Me</button></a>
+          </div>
+        
+        
+
+        <div  class="anasimage mt-5 ">
+            <img class="img-fluid" src="src/img/profile1.png" alt="anasimg" >      
          </div>
     </div>
    
 <center>
-    <button id="hirebutton">Hire Me</button>
-    <div class="aboutme" id="aboutme">
+    
+   
+    <div class="aboutme  mt-5" id="aboutme">
+       <h2>About Me 🌟</h2>
+        <h3>Development is my passion</h3>
+      
        
-        <h3>Development in my passion</h3>
-        <center> <img src="src/img/dev.gif" alt="dev" class="dev"></center>
-       
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa labore rerum culpa, natus, enim vero sint ex sequi fuga eligendi dicta nostrum distinctio maiores ut!</p>
+        <p class=" mt-5 ">
+          I'm a passionate Web Developer with a knack for crafting responsive and user-friendly websites. Currently, I’m pursuing my Bachelor’s in Computer Engineering at Shri Sad Vidya Mandal Institute of Technology, Gujarat University.
+          
+          Alongside web development, I’m exploring the MERN stack and enhancing my skills in graphic design and video editing. I thrive on creativity, problem-solving, and delivering impactful digital solutions.
+          
+          Let’s create something amazing together! 🚀
+          
+          </p>
        
     </div>
-    <a href="src/Anas Navsari  resume.pdf" download > <button id="Downloadcv"> Download  Curriculum Vitae </button></a>
+    <a href="src/Anas Navsari  resume.pdf" download > <button class="Downloadcv  mt-5"> Download CV </button></a>
     
    
 </center>
 </div>
-<center>
-    <div class="myskills" id="skills">
-        <h2>My Skills</h2>
-        <h3>Skills Reflects our Knowlwdge</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, vero.</p>
-        <h1>1 Year of Experience</h1>
+
+
+<div class="myskills justify-content-center " id="skills">
+  <section class="skills-showcase  mt-5" id="skills-showcase">
+    <h2>Technical Expertise</h2>
+    <p class="text-light">Here's a glimpse of my technical skill set and expertise in various areas of development and design:</p>
+    
+    <div class="skills-wrapper   mt-5">
+      <!-- Skill Item 1 -->
+      <div class="skill-item">
+        <h4>Web Development</h4>
+        <ul>
+          <li>Responsive front-end designs</li>
+          <li>Modern frameworks like Bootstrap</li>
+          <li>Basic backend skills (MongoDB)</li>
+        </ul>
+      </div>
+
+      <!-- Skill Item 2 -->
+      <div class="skill-item">
+        <h4>Programming Languages</h4>
+        <ul>
+          <li>Proficiency in C and C++</li>
+          <li>Java for object-oriented programming</li>
+          <li>Familiar with Python scripting</li>
+        </ul>
+      </div>
+
+      <!-- Skill Item 3 -->
+      <div class="skill-item">
+        <h4>Version Control</h4>
+        <ul>
+          <li>Experienced with Git</li>
+          <li>Collaboration on GitHub</li>
+        </ul>
+      </div>
+
+      <!-- Skill Item 4 -->
+      <div class="skill-item">
+        <h4>Graphic Design</h4>
+        <ul>
+          <li>Custom logo and illustration</li>
+          <li>Social media and banner graphics</li>
+          <li>Tools: Photoshop, Illustrator</li>
+        </ul>
+      </div>
+
+      <!-- Skill Item 5 -->
+      <div class="skill-item  ">
+        <h4>Video Editing</h4>
+        <ul>
+          <li>Professional video editing</li>
+          <li>Transitions and color grading</li>
+          <li>Tools: Adobe Premiere Pro</li>
+        </ul>
+      </div>
     </div>
+  </section>
+  <h2 class="text-center  mt-5"> Technologies</h2>
 
-        <marquee class="marquee">
-            <img src="src/img/HTML5.png" alt="HTML5" height="80vh">
-            <img src="src/img/css.png" alt="css" height="80vh">
-            <img src="src/img/js.png" alt="js" height="80vh">
-            <img src="src/img/bootstrap.png" alt="bootstrap" height="80vh">
-            <img src="src/img/c.png" alt="c" height="80vh">
-            <img src="src/img/c++.png" alt="c++" height="80vh">
-            <img src="src/img/Java.png" alt="Java" height="80vh">
-            <img src="src/img/mongodb.png" alt="mongodb" height="80vh">
-            <img src="src/img/git.png" alt="github" height="80vh">
-           <img src="src/img/GitHubmarquee.png" alt="github" height="80vh">
-        </marquee>
-        
-   
-</center>
-<div class="myservices">
-    <center>
-    <h2>My Services</h2>
-
-
-    <div class="cardcontainer">
-        <div class="card">
-            <i class="fa-solid fa-computer"></i>
-            <h3>website Designing</h3>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis doloremque fugit quos pariatur aliquid delectus reprehenderit iusto labore nobis cupiditate rerum exercitationem sint maxime, earum velit dolore. Vero, eveniet consectetur!
-        </div>
-
-        <div class="card">
-            <i class="fa-brands fa-google"></i>
-           
-            <h3>Web Development</h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eaque quae accusamus earum atque numquam vitae, ex alias! Molestias atque temporibus officiis aperiam dolorum vero dignissimos quasi officia maxime dolor!
-        </div>
-        <div class="card">
-            <i class="fa-regular fa-mobile"></i>
-            <h3>Mobile App Development</h3>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo officiis aperiam recusandae modi minima hic quas, cum neque assumenda dignissimos deleniti, beatae provident! Voluptas sequi libero expedita consequatur? Consequatur, aut.
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-paintbrush"></i>
-            <h3>graphic Design</h3>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus officia consectetur alias! Ipsum doloribus, ea accusantium ad, odit quos eum eius suscipit modi voluptatibus, voluptas impedit dolore? Saepe, nemo adipisci?
-        </div>
-       
-        <div class="card">
-            <i class="fa-solid fa-icons"></i>
-            <h3>Icon Design</h3>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto dolore, quibusdam voluptatum doloribus minima voluptatem illum veniam iure, in porro, velit temporibus ratione cumque. Provident possimus porro commodi pariatur nisi!
-        </div>
-        <div class="card">
-            <i class="fa-brands fa-slack"></i>
-            <h3>logo Design</h3>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed doloribus odio numquam fugiat laborum, qui doloremque tenetur necessitatibus quo non sunt, corrupti consectetur magnam dolores ab nam, quas amet? Consectetur?
-        </div>
-        <div class="card">
-            <i class="fa-solid fa-video"></i>
-            <h3>Video Editing</h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, nihil ducimus! Quo exercitationem repudiandae, voluptas aliquid facilis totam quasi est cupiditate hic unde velit, ducimus architecto, illo dolore. Quae, nulla!
-        </div>
-    </div>
+<div class="skills-container">
+  <div class="skill-card">
+    <img src="src/img/HTML5.png" alt="HTML5">
+    <h4>HTML5</h4>
+  </div>
+  <div class="skill-card">
+    <img src="src/img/css.png" alt="CSS">
+    <h4>CSS</h4>
+  </div>
+  <div class="skill-card">
+    <img src="src/img/js.png" alt="JavaScript">
+    <h4>JavaScript</h4>
+  </div>
+  <div class="skill-card">
+    <img src="src/img/bootstrap.png" alt="Bootstrap">
+    <h4>Bootstrap</h4>
+  </div>
+  <div class="skill-card">
+    <img src="src/img/c.png" alt="C">
+    <h4>C</h4>
+  </div>
+  <div class="skill-card">
+    <img src="src/img/c++.png" alt="C++">
+    <h4>C++</h4>
+  </div>
+  <div class="skill-card">
+    <img src="src/img/Java.png" alt="Java">
+    <h4>Java</h4>
+  </div>
+  <div class="skill-card">
+    <img src="src/img/mongodb.png" alt="MongoDB">
+    <h4>MongoDB</h4>
+  </div>
+  <div class="skill-card">
+    <img src="src/img/git.png" alt="Git">
+    <h4>Git</h4>
+  </div>
+  <div class="skill-card">
+    <img src="src/img/GitHubmarquee.png" alt="GitHub">
+    <h4>GitHub</h4>
+  </div>
 </div>
-</center>
-<div class="contactme">
+
+
+
+
+<h2 class=" mt-4">My Services</h2>
+<div class="cardcontainer  mt-5">
+  <div class="card">
+    <img class="card-img-top" src="src/img/Web-Development.jpg" alt="Web Development">
+    <div class="card-body">
+      <h5 class="card-title">WEB Development</h5>
+      <p class="card-text">
+        I design and develop responsive, user-friendly websites with modern technologies. My services include front-end design, backend development, and seamless database integration for a complete web solution.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="src/img/appdevelpoment.jpg" alt="App Development">
+    <div class="card-body">
+      <h5 class="card-title">App Development</h5>
+      <p class="card-text">
+        I build user-friendly, feature-rich mobile applications tailored to your needs. My services include intuitive UI/UX design, seamless functionality, and cross-platform compatibility for an optimal user experience.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="src/img/graphicdesign.jpg" alt="Graphic Design">
+    <div class="card-body">
+      <h5 class="card-title">Graphic Design</h5>
+      <p class="card-text">
+        I create visually appealing designs that align with your brand identity. My services include logo design, social media graphics, banners, and custom illustrations to help your brand stand out.
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="src/img/Video-Editing.jpeg" alt="Video Editing">
+    <div class="card-body">
+      <h5 class="card-title">Video Editing</h5>
+      <p class="card-text">
+        I craft engaging and professional videos tailored to your vision. My services include cutting, transitions, color grading, effects, and audio synchronization to deliver polished and impactful content.
+      </p>
+    </div>
+  </div>
+</div>
+
+<section class="projects-section  mt-4" id="projects">
+  <h2>My Projects</h2>
+  <p class="text-light">Here are some of the projects I have worked on, showcasing my skills in web and app development.</p>
+  
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card  mt-5">
+      <center><img src="src/img/clothy.png"  alt="Clothy E-Commerce"></center>
+      <h4 class="text-light">Clothy E-Commerce Website</h4>
+      <p class="text-light">An e-commerce platform for clothing with a sleek user interface and seamless shopping experience. Features include product listings, cart functionality, and a secure checkout process.</p>
+      <a href="https://anasnavsari.github.io/clothy/index.html" target="_blank">Live Preview</a>
+      <a href="https://github.com/anasnavsari/clothy.git" target="_blank">View Code</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<div class="contactme   mt-5" id="contact">
     <center>
     <h2>Contact Me</h2>
     <p>Want to get in touch?</p>
   
-    <div class="socialicon">
+    <div class="socialicon fs-1 mt-4">
         <a href="https://github.com/anasnavsari" target="_blank"><i class="fa-brands fa-github"></i></a>
         <a href=https://www.linkedin.com/in/anasnavsari/
        target="_blank" ><i class="fa-brands fa-linkedin"></i></a>
@@ -285,13 +687,44 @@
 
 
 
-    <h3>Have any thing in mind ?</h3>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos laboriosam omnis molestias totam amet? Voluptas sapiente nihil nobis debitis unde ratione laborum soluta alias facilis.
+    <h3 class="text-light mt-4">Have any thing in mind ?</h3>
+    <section id="contact" class="contact-section">
+      <div class="container py-5">
+      
+        <p class="text-center text-light mb-5">Have a question or want to work together? Feel free to reach out!</p>
+        <div class="row justify-content-center">
+          <div class="col-md-8  col-lg-6">
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+              <div class="mb-4 text-start">
+                <label for="name" class="form-label text-light">Your Name</label>
+                <br>
+                <input type="text" class="form-control form-input" id="name" name="name" placeholder="Enter your name" required>
+              </div>
+  
+              <div class="mb-4 text-start ">
+                <label for="email" class="form-label text-light ">Your Email</label>
+                <br>
+                <input type="email" class="form-control form-input " id="email" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-4 text-start">
+                <label for="message" class="form-label text-light ">Your Message</label>
+                <br>
+                <textarea class="form-control form-input" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+              </div>
+              <div class="text-center">
+                  <br>
+                <button type="submit" class="btn btn-primary px-4 py-2">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 </div>
 </center>
 
-<div class="footer"></div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
