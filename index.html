@@ -17,7 +17,9 @@ nav{background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(9
 }
 .intro{background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(90, 25, 146) 0%, rgba(24,22,39,1) 90% );
 }
-
+#hirebutton{
+  margin: 0;
+}
   
 .img-fluid{
  
@@ -110,8 +112,8 @@ button:active:before {
     }
 
     .skills-wrapper {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      display: flex;
+     
       gap: 20px;
       max-width: 1200px;
       margin: 0 auto;
@@ -119,6 +121,8 @@ button:active:before {
     }
 
     .skill-item {
+      height: 40vh;
+      width: 30vw;
       background-color: #f4f4f4;
       border-radius: 10px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -223,7 +227,7 @@ button:active:before {
 
     .myskills h2 {
       font-size: 2.5rem;
-      color: #ff0080;
+      color: #f7f7f7;
       margin-bottom: 10px;
     }
 
@@ -464,13 +468,13 @@ button:active:before {
 
 <div class="p ">
     
-    <div class="intro  d-flex justify-content-around border border-light-subtle text-light border-2  m-auto mt-5 ">
+    <div class="intro  d-flex justify-content-around border border-light-subtle text-light border-2   mt-5 ">
       <div class="hello mt-5 "> 
-        <h2  class="text-light text-start">Hello !</h2>
+        <h2  class="text-light text-start mt-1">Hello !</h2>
             <h1> I'M  ANASMEHDI</h1>
-            <h2 class="text-light  text-start">Full Stack Developer</h2>
-            <h3>Form Gujarat.</h3>
-            <a class="" href="Https://wa.me/9313640952" target="_blank"> <button id="hirebutton">Hire Me</button></a>
+            <h2 class="text-light mt-5 text-start">Full Stack Developer</h2>
+            <h3 >From Gujarat.</h3>
+            <a href="Https://wa.me/9313640952" target="_blank"> <button id="hirebutton">Hire Me</button></a>
           </div>
         
         
@@ -488,7 +492,7 @@ button:active:before {
         <h3>Development is my passion</h3>
       
        
-        <p class=" mt-5 ">
+        <p class=" mt-5 text-light ">
           I'm a passionate Web Developer with a knack for crafting responsive and user-friendly websites. Currently, I’m pursuing my Bachelor’s in Computer Engineering at Shri Sad Vidya Mandal Institute of Technology, Gujarat University.
           
           Alongside web development, I’m exploring the MERN stack and enhancing my skills in graphic design and video editing. I thrive on creativity, problem-solving, and delivering impactful digital solutions.
@@ -505,12 +509,12 @@ button:active:before {
 </div>
 
 
-<div class="myskills justify-content-center " id="skills">
+<div class="myskills " id="skills">
   <section class="skills-showcase  mt-5" id="skills-showcase">
     <h2>Technical Expertise</h2>
     <p class="text-light">Here's a glimpse of my technical skill set and expertise in various areas of development and design:</p>
     
-    <div class="skills-wrapper   mt-5">
+    <div class="skills-wrapper d-flex flex-wrap justify-content-center  mt-5">
       <!-- Skill Item 1 -->
       <div class="skill-item">
         <h4>Web Development</h4>
@@ -541,7 +545,7 @@ button:active:before {
       </div>
 
       <!-- Skill Item 4 -->
-      <div class="skill-item">
+      <div class="skill-item ">
         <h4>Graphic Design</h4>
         <ul>
           <li>Custom logo and illustration</li>
@@ -551,7 +555,7 @@ button:active:before {
       </div>
 
       <!-- Skill Item 5 -->
-      <div class="skill-item  ">
+      <div class="skill-item ">
         <h4>Video Editing</h4>
         <ul>
           <li>Professional video editing</li>
