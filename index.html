@@ -1,676 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anasnavsari</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-<style>
-   
-    body{
-      background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(151,41,247,1) 0%, rgba(24,22,39,1) 90% );
+    <title>Anas Navsari — Full Stack Developer</title>
+<meta
+    name="description"
+    content="Anas Navsari — Full Stack Developer building responsive and user-friendly web applications with JavaScript, React, Node.js and MongoDB."
+>
 
-}
-nav{background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(90, 25, 146) 0%, rgba(24,22,39,1) 90% );
-}
-.intro{background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(90, 25, 146) 0%, rgba(24,22,39,1) 90% );
-}
-#hirebutton{
-  margin: 0;
-}
-  
-.img-fluid{
- 
- 
-  filter: grayscale(0.7) !important;
-  border-radius: 69% 31% 69% 31% / 47% 45% 55% 53% ;
-  background: rgb(41,26,116);
-background: linear-gradient(90deg, rgba(41,26,116,1) 0%, rgba(106,14,111,1) 50%, rgba(71,81,110,1) 100%);
-}
+<meta name="author" content="Anas Navsari">
 
-/* From Uiverse.io by cssbuttons-io */ 
-button {
-  --color: #560bad;
-  font-family: inherit;
-  display: inline-block;
-  width: 8em;
-  height: 2.6em;
-  line-height: 2.5em;
-  margin: 20px;
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border: 2px solid var(--color);
-  transition: color 0.5s;
-  z-index: 1;
-  font-size: 17px;
-  border-radius: 6px;
-  font-weight: 500;
-  color: var(--color);
-}
+<meta
+    name="theme-color"
+    content="#080808"
+>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-button:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background: var(--color);
-  height: 150px;
-  width: 200px;
-  border-radius: 50%;
-}
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
 
-button:hover {
-  color: #fff;
-}
+    <link rel="stylesheet" href="src/css/style.css">
 
-button:before {
-  top: 100%;
-  left: 100%;
-  transition: all 0.7s;
-}
-
-button:hover:before {
-  top: -30px;
-  left: -30px;
-}
-
-button:active:before {
-  background: #970ea7;
-  transition: background 0s;
-}
-  h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 2rem;
-      color: #333;
-    }
-
-
-
-
-
-    skills-showcase {
-      padding: 50px 20px;
-      text-align: center;
-      background-color: #fefefe;
-    }
-
-    .skills-showcase h2 {
-      font-size: 2.5rem;
-      color: #007bff;
-      margin-bottom: 20px;
-    }
-
-    .skills-showcase p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 30px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .skills-wrapper {
-      display: flex;
-     
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .skill-item {
-      height: 40vh;
-      width: 30vw;
-      background-color: #f4f4f4;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: left;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .skill-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .skill-item h4 {
-      font-size: 1.5rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .skill-item ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .skill-item ul li {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-    }
-
-    .skill-item ul li::before {
-      content: "✔";
-      color: #007bff;
-      font-size: 1rem;
-      margin-right: 10px;
-    }
-
-    .cardcontainer {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .card {
-      position: relative;
-      width: 18rem;
-      border-radius: 15px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 
-                  0 0 15px #0099ff;
-    }
-
-    .card-img-top {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .card:hover .card-img-top {
-      transform: scale(1.1);
-    }
-
-    .card-body {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #333;
-      transition: color 0.3s ease;
-    }
-
-    .card:hover .card-title {
-      color: #ff0080;
-    }
-
-    .card-text {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    myskills {
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .myskills h2 {
-      font-size: 2.5rem;
-      color: #f7f7f7;
-      margin-bottom: 10px;
-    }
-
-    .myskills h3 {
-      font-size: 1.5rem;
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    .myskills p {
-      font-size: 1rem;
-      color: #777;
-      margin-bottom: 20px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .myskills h1 {
-      font-size: 1.8rem;
-      color: #333;
-      margin-top: 20px;
-    }
-
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .skill-card {
-      width: 150px;
-      height: 200px;
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 15px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .skill-card img {
-      height: 80px;
-      margin-bottom: 10px;
-    }
-
-    .skill-card h4 {
-      font-size: 1.1rem;
-      color: #333;
-      text-align: center;
-      margin-top: 10px;
-    }
-   
-
-    .projects-section {
-      padding: 50px 20px;
-      
-      text-align: center;
-    }
-
-    .projects-section h2 {
-      font-size: 2.5rem;
-      color: #ff6600;
-      margin-bottom: 20px;
-    }
-
-    .projects-section p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 40px;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .project-card {
-      
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      text-align: left;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      padding: 20px;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .project-card img {
-      
-      width: 80%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .project-card h4 {
-      font-size: 1.5rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .project-card p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .project-card a {
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-      background-color: #ff6600;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-      margin-right: 10px;
-    }
-
-    .project-card a:hover {
-      background-color: #cc5200;
-    }
-
-
-
-
-    
-    
-  
-    .contact-section h2 {
-      font-size: 2.5rem;
-      color: #ff6600;
-      
-    }
-  
-    .contact-section p {
-      font-size: 1rem;
-      color: #555;
-    
-    }
-  
-    .contact-form {
-     
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    }
-  
-    .form-label {
-      font-weight: bold;
-      color: #333;
-    }
-  
-    .form-input {
-      border-radius: 8px;
-      padding: 12px;
-      border: 1px solid #ddd;
-    }
-  
-    .form-input:focus {
-      border-color: #ff6600;
-      box-shadow: 0 0 5px rgba(255, 102, 0, 0.3);
-    }
-  
-    .btn-primary {
-      background-color: #ff6600;
-      border-color: #ff6600;
-      transition: all 0.3s ease;
-    }
-  
-    .btn-primary:hover {
-      background-color: #cc5200;
-      border-color: #cc5200;
-    }
-  
-    /* Center the form and ensure responsive design */
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-   
-</style>
 </head>
-<body >
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark">
-  <div class="container-fluid text-light ">
-    <a class="navbar-brand fs-1 text-light" href="index.html" > Portfolio .</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item ">
-          <a class="nav-link active text-light fs-5" aria-current="page" href="#aboutme" >About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light fs-5" href="#skills">My Skills</a>
-        </li>
-        <li class="nav-item dropdown ">
-          <a class="nav-link dropdown-toggle fs-5 text-light ." href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Contact Me
-          </a>
-          <ul class="dropdown-menu fs-1 text-center bg-transparent">
-            <li><a href="https://github.com/anasnavsari" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href=https://www.linkedin.com/in/anasnavsari/
-                target="_blank" ><i class="fa-brands fa-linkedin"></i></a></li>
-             <li><a href="mailto:anasnavsari04@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
-                <li><a href="Https://wa.me/9313640952" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
-            <li><a href="https://www.instagram.com/anasnavsari/" target="_blank"><i class="fa-brands fa-instagram" ></i></a></li>
-          </ul>
-        </li>
-        
-      </ul>
-      
+
+<div class="cursor-glow"></div>
+<div class="scroll-progress"></div>
+
+<nav class="site-nav" aria-label="Main navigation">
+
+    <div class="nav-inner">
+
+        <a href="#home" class="logo">
+            ANAS<span>.</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#work">Work</a>
+
+            <a href="#about">About</a>
+
+            <a href="#experience">Experience</a>
+
+            <a href="#stack">Stack</a>
+
+            <a href="#currently">currently</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <a
+            href="src/Anas Navsari  resume.pdf"
+            download
+            class="nav-resume"
+        >
+            Resume ↗
+        </a>
+
     </div>
-  </div>
+
 </nav>
 
-<div class="container ">    
 
 
-<div class="p ">
-    
-    <div class="intro  d-flex justify-content-around border border-light-subtle text-light border-2   mt-5 ">
-      <div class="hello mt-5 "> 
-        <h2  class="text-light text-start mt-1">Hello !</h2>
-            <h1> I'M  ANASMEHDI</h1>
-            <h2 class="text-light mt-5 text-start">Full Stack Developer</h2>
-            <h3 >From Gujarat.</h3>
-            <a href="Https://wa.me/9313640952" target="_blank"> <button id="hirebutton">Hire Me</button></a>
-          </div>
-        
-        
-
-        <div  class="anasimage mt-5 ">
-            <img class="img-fluid" src="src/img/profile1.png" alt="anasimg" >      
-         </div>
-    </div>
    
-<center>
-    
-   
-    <div class="aboutme  mt-5" id="aboutme">
-       <h2>About Me 🌟</h2>
-        <h3>Development is my passion</h3>
-      
-       
-        <p class=" mt-5 text-light ">
-          I'm a passionate Web Developer with a knack for crafting responsive and user-friendly websites. Currently, I’m pursuing my Bachelor’s in Computer Engineering at Shri Sad Vidya Mandal Institute of Technology, Gujarat University.
-          
-          Alongside web development, I’m exploring the MERN stack and enhancing my skills in graphic design and video editing. I thrive on creativity, problem-solving, and delivering impactful digital solutions.
-          
-          Let’s create something amazing together! 🚀
-          
-          </p>
-       
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="hero-label">
+            FULL-STACK DEVELOPER · INDIA
+        </p>
+
+        <h1>
+            I BUILD
+            <span>DIGITAL</span>
+            PRODUCTS.
+        </h1>
+
+        <p class="hero-description">
+            I'm Anas Navsari, a Full Stack Developer focused on
+            building responsive and user-friendly web applications
+            with JavaScript, React, Node.js and MongoDB.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#work" class="primary-btn">
+                View My Work
+                <span>↗</span>
+            </a>
+
+            <a
+                href="src/Anas Navsari  resume.pdf"
+                download
+                class="secondary-btn"
+            >
+                Download Resume
+            </a>
+
+        </div>
+
     </div>
-    <a href="src/Anas Navsari  resume.pdf" download > <button class="Downloadcv  mt-5"> Download CV </button></a>
-    
-   
-</center>
-</div>
 
 
-<div class="myskills " id="skills">
-  <section class="skills-showcase  mt-5" id="skills-showcase">
-    <h2>Technical Expertise</h2>
-    <p class="text-light">Here's a glimpse of my technical skill set and expertise in various areas of development and design:</p>
-    
-    <div class="skills-wrapper d-flex flex-wrap justify-content-center  mt-5">
-      <!-- Skill Item 1 -->
-      <div class="skill-item">
-        <h4>Web Development</h4>
-        <ul>
-          <li>Responsive front-end designs</li>
-          <li>Modern frameworks like Bootstrap</li>
-          <li>Basic backend skills (MongoDB)</li>
-        </ul>
-      </div>
+    <div class="hero-visual">
 
-      <!-- Skill Item 2 -->
-      <div class="skill-item">
-        <h4>Programming Languages</h4>
-        <ul>
-          <li>Proficiency in C and C++</li>
-          <li>Java for object-oriented programming</li>
-          <li>Familiar with Python scripting</li>
-        </ul>
-      </div>
+        <div class="hero-circle">
 
-      <!-- Skill Item 3 -->
-      <div class="skill-item">
-        <h4>Version Control</h4>
-        <ul>
-          <li>Experienced with Git</li>
-          <li>Collaboration on GitHub</li>
-        </ul>
-      </div>
+            <img
+                src="src/img/profile1.png"
+                alt="Anas Navsari"
+            >
 
-      <!-- Skill Item 4 -->
-      <div class="skill-item ">
-        <h4>Graphic Design</h4>
-        <ul>
-          <li>Custom logo and illustration</li>
-          <li>Social media and banner graphics</li>
-          <li>Tools: Photoshop, Illustrator</li>
-        </ul>
-      </div>
+        </div>
 
-      <!-- Skill Item 5 -->
-      <div class="skill-item ">
-        <h4>Video Editing</h4>
-        <ul>
-          <li>Professional video editing</li>
-          <li>Transitions and color grading</li>
-          <li>Tools: Adobe Premiere Pro</li>
-        </ul>
-      </div>
+        <div class="hero-orbit orbit-one"></div>
+
+        <div class="hero-orbit orbit-two"></div>
+
     </div>
-  </section>
-  <h2 class="text-center  mt-5"> Technologies</h2>
-
-<div class="skills-container">
-  <div class="skill-card">
-    <img src="src/img/HTML5.png" alt="HTML5">
-    <h4>HTML5</h4>
-  </div>
-  <div class="skill-card">
-    <img src="src/img/css.png" alt="CSS">
-    <h4>CSS</h4>
-  </div>
-  <div class="skill-card">
-    <img src="src/img/js.png" alt="JavaScript">
-    <h4>JavaScript</h4>
-  </div>
-  <div class="skill-card">
-    <img src="src/img/bootstrap.png" alt="Bootstrap">
-    <h4>Bootstrap</h4>
-  </div>
-   <div class="skill-card">
-    <img src="src/img/React.png" alt="Bootstrap">
-    <h4>REACT</h4>
-  </div>
-  <div class="skill-card">
-    <img src="src/img/c.png" alt="C">
-    <h4>C</h4>
-  </div>
-  <div class="skill-card">
-    <img src="src/img/c++.png" alt="C++">
-    <h4>C++</h4>
-  </div>
-  <div class="skill-card">
-    <img src="src/img/Java.png" alt="Java">
-    <h4>Java</h4>
-  </div>
-  <div class="skill-card">
-    <img src="src/img/mongodb.png" alt="MongoDB">
-    <h4>MongoDB</h4>
-  </div>
-  <div class="skill-card">
-    <img src="src/img/git.png" alt="Git">
-    <h4>Git</h4>
-  </div>
-  <div class="skill-card">
-    <img src="src/img/GitHubmarquee.png" alt="GitHub">
-    <h4>GitHub</h4>
-  </div>
-</div>
 
 
+    <div class="hero-bottom">
 
+        <span>
+            SCROLL TO EXPLORE
+        </span>
 
-<h2 class=" mt-4">My Services</h2>
-<div class="cardcontainer  mt-5">
-  <div class="card">
-    <img class="card-img-top" src="src/img/Web-Development.jpg" alt="Web Development">
-    <div class="card-body">
-      <h5 class="card-title">WEB Development</h5>
-      <p class="card-text">
-        I design and develop responsive, user-friendly websites with modern technologies. My services include front-end design, backend development, and seamless database integration for a complete web solution.
-      </p>
+        <span>
+            ↓
+        </span>
+
     </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="src/img/appdevelpoment.jpg" alt="App Development">
-    <div class="card-body">
-      <h5 class="card-title">App Development</h5>
-      <p class="card-text">
-        I build user-friendly, feature-rich mobile applications tailored to your needs. My services include intuitive UI/UX design, seamless functionality, and cross-platform compatibility for an optimal user experience.
-      </p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="src/img/graphicdesign.jpg" alt="Graphic Design">
-    <div class="card-body">
-      <h5 class="card-title">Graphic Design</h5>
-      <p class="card-text">
-        I create visually appealing designs that align with your brand identity. My services include logo design, social media graphics, banners, and custom illustrations to help your brand stand out.
-      </p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="src/img/Video-Editing.jpeg" alt="Video Editing">
-    <div class="card-body">
-      <h5 class="card-title">Video Editing</h5>
-      <p class="card-text">
-        I craft engaging and professional videos tailored to your vision. My services include cutting, transitions, color grading, effects, and audio synchronization to deliver polished and impactful content.
-      </p>
-    </div>
-  </div>
-</div>
 
-<section class="projects-section  mt-4" id="projects">
-  <h2>My Projects</h2>
-  <p class="text-light">Here are some of the projects I have worked on, showcasing my skills in web and app development.</p>
-  
-  <div class="projects-grid">
-    <!-- Project 1 -->
-    <div class="project-card  mt-5">
-      <center><img src="src/img/clothy.png"  alt="Clothy E-Commerce"></center>
-      <h4 class="text-light">Clothy E-Commerce Website</h4>
-      <p class="text-light">An e-commerce platform for clothing with a sleek user interface and seamless shopping experience. Features include product listings, cart functionality, and a secure checkout process.</p>
-      <a href="https://anasnavsari.github.io/clothy/index.html" target="_blank">Live Preview</a>
-      <a href="https://github.com/anasnavsari/clothy.git" target="_blank">View Code</a>
-    </div>
-  </div>
 </section>
 
 
@@ -678,58 +155,1021 @@ button:active:before {
 
 
 
-<div class="contactme   mt-5" id="contact">
-    <center>
-    <h2>Contact Me</h2>
-    <p>Want to get in touch?</p>
-  
-    <div class="socialicon fs-1 mt-4">
-        <a href="https://github.com/anasnavsari" target="_blank"><i class="fa-brands fa-github"></i></a>
-        <a href=https://www.linkedin.com/in/anasnavsari/
-       target="_blank" ><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/anasnavsari/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="mailto:anasnavsari04@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
-        <a href="Https://wa.me/9313640952" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-   
 
+<section class="work-section" id="work">
 
+    <div class="section-header">
 
-    <h3 class="text-light mt-4">Have any thing in mind ?</h3>
-    <section id="contact" class="contact-section">
-      <div class="container py-5">
-      
-        <p class="text-center text-light mb-5">Have a question or want to work together? Feel free to reach out!</p>
-        <div class="row justify-content-center">
-          <div class="col-md-8  col-lg-6">
-            <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-              <div class="mb-4 text-start">
-                <label for="name" class="form-label text-light">Your Name</label>
-                <br>
-                <input type="text" class="form-control form-input" id="name" name="name" placeholder="Enter your name" required>
-              </div>
-  
-              <div class="mb-4 text-start ">
-                <label for="email" class="form-label text-light ">Your Email</label>
-                <br>
-                <input type="email" class="form-control form-input " id="email" name="email" placeholder="Enter your email" required>
-              </div>
-              <div class="mb-4 text-start">
-                <label for="message" class="form-label text-light ">Your Message</label>
-                <br>
-                <textarea class="form-control form-input" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
-              </div>
-              <div class="text-center">
-                  <br>
-                <button type="submit" class="btn btn-primary px-4 py-2">Send</button>
-              </div>
-            </form>
-          </div>
+        <div>
+            <p class="section-number">01 / SELECTED WORK</p>
+
+            <h2>
+                Things I've
+                <span>built.</span>
+            </h2>
         </div>
-      </div>
-    </section>
+
+        <p class="section-intro">
+            A selection of projects and web experiences
+            I've worked on across professional and
+            personal development.
+        </p>
+
+    </div>
+
+
+    <div class="work-list">
+
+
+        <!-- PROJECT 01 -->
+
+        <article class="work-project">
+
+            <div class="project-number">
+                01
+            </div>
+
+            <div class="project-image project-image-real">
+
+    <img
+        src="src/img/360degreeexport-preview.png"
+        alt="360DegreeExport website"
+    >
+
+    <a
+        href="https://anasnavsari.github.io/360-DegreeExport/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="project-image-link"
+    >
+        <span>Visit Website</span>
+        <span>↗</span>
+    </a>
+
 </div>
-</center>
+
+
+            <div class="project-info">
+
+               <p class="project-type">
+    01 / PROFESSIONAL PROJECT
+</p>
+
+                <h3>
+                    360DegreeExport
+                </h3>
+
+               <p class="project-description">
+    A responsive e-commerce and export-business
+    website for a global Indian food-products
+    exporter. I worked on frontend design,
+    responsive layouts, product presentation,
+    performance optimization and website
+    functionality.
+</p>
+
+
+                <div class="project-tech">
+
+                    <span>React</span>
+                    <span>JavaScript</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Bootstrap</span>
+
+                </div>
+
+
+                <div class="project-links">
+
+    <span class="project-role">
+        Web Development
+    </span>
+
+    <a
+        href="https://anasnavsari.github.io/360-DegreeExport/"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Visit Website ↗
+    </a>
+
+</div>
+
+            </div>
+
+        </article>
+
+<!-- PROJECT 02 -->
+
+        <article class="work-project">
+
+            <div class="project-number">
+                02
+            </div>
+
+            <div class="project-image project-image-real">
+
+    <img
+        src="src/img/clothy.png"
+        alt="Clothy E-Commerce Website"
+    >
+
+    <a
+        href="https://anasnavsari.github.io/clothy/index.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="project-image-link"
+    >
+        <span>Visit Website</span>
+        <span>↗</span>
+    </a>
+
+</div>
+
+
+            <div class="project-info">
+
+               <p class="project-type">
+    01 / PERSONAL PROJECT
+</p>
+
+                <h3>
+                    Clothy
+                </h3>
+
+               <p class="project-description">
+    An e-commerce website focused on creating
+                    a simple clothing-shopping experience with
+                    product browsing, cart functionality and
+                    responsive interface design.
+</p>
+
+
+                <div class="project-tech">
+
+                     <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
+
+                </div>
+
+
+                <div class="project-links">
+
+    <span class="project-role">
+        Web Development
+    </span>
+
+    <a
+        href="https://github.com/anasnavsari/clothy.git"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Source Code ↗
+    </a>
+
+</div>
+
+            </div>
+
+        </article>
+
+
+        
+        
+
+
+
+
+       
+
+    </div>
+
+</section>
+
+
+
+
+<!-- About section -->
+
+
+
+<section class="about-section" id="about">
+
+    <div class="about-header">
+
+        <p class="section-number">
+            02 / ABOUT
+        </p>
+
+        <h2>
+            I'M ANAS
+            <span>NAVSARI.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-main">
+
+            <p class="about-lead">
+                FULL-STACK
+                <span>DEVELOPER.</span>
+            </p>
+
+            <p class="about-text">
+                I'm a Full Stack Developer focused on building
+                responsive and user-friendly web applications.
+                I enjoy turning ideas into practical digital
+                experiences and continuously improving my
+                development skills.
+            </p>
+
+            <p class="about-text">
+                My current focus is JavaScript, React, Node.js
+                and MongoDB, with an interest in building
+                complete applications from frontend interfaces
+                to backend systems.
+            </p>
+
+        </div>
+
+
+        <div class="about-details">
+
+            <div class="detail-block">
+
+                <span class="detail-label">
+                    EDUCATION
+                </span>
+
+                <h3>
+                    Bachelor of Engineering
+                </h3>
+
+                <p>
+                    Gujarat Technological University
+                </p>
+
+                <span class="detail-date">
+                    2021 — 2025
+                </span>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <span class="detail-label">
+                    CURRENT DEVELOPMENT
+                </span>
+
+                <h3>
+                    Full Stack Development
+                </h3>
+
+                <p>
+                    Red & White Skill Education
+                </p>
+
+                <span class="detail-date">
+                    2024 — CURRENT
+                </span>
+
+            </div>
+
+
+            <div class="detail-block">
+
+                <span class="detail-label">
+                    FOCUS
+                </span>
+
+                <div class="focus-tags">
+
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="about-bottom">
+
+        <span>
+            BASED IN INDIA
+        </span>
+
+        <span>
+            FULL STACK DEVELOPMENT
+        </span>
+
+        <span>
+            2026
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE SECTION -->
+
+
+<section class="experience-section" id="experience">
+
+    <div class="experience-header">
+
+        <p class="section-number">
+            03 / EXPERIENCE
+        </p>
+
+        <h2>
+            WHERE I'VE
+            <span>WORKED.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="experience-list">
+
+
+        <!-- EXPERIENCE 01 -->
+
+        <article class="experience-item">
+
+            <div class="experience-meta">
+
+                <span class="experience-number">
+                    01
+                </span>
+
+                <span class="experience-date">
+                    MAR — JUN 2024
+                </span>
+
+            </div>
+
+
+            <div class="experience-content">
+
+                <p class="experience-company">
+                    AD STYLE MARKETING AGENCY
+                </p>
+
+                <h3>
+                    Web Developer
+                </h3>
+
+                <p class="experience-description">
+                    Contributed to multiple client projects,
+                    delivering scalable and responsive websites.
+                    Collaborated with the team to implement
+                    effective design and development solutions.
+                </p>
+
+                <div class="experience-tags">
+
+                    <span>Web Development</span>
+                    <span>Responsive Design</span>
+                    <span>Figma</span>
+                    <span>UI/UX</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- EXPERIENCE 02 -->
+
+        <article class="experience-item">
+
+            <div class="experience-meta">
+
+                <span class="experience-number">
+                    02
+                </span>
+
+                <span class="experience-date">
+                    JUL — AUG 2024
+                </span>
+
+            </div>
+
+
+            <div class="experience-content">
+
+                <p class="experience-company">
+                    SHARP ENTERPRISE
+                </p>
+
+                <h3>
+                    Web Developer
+                </h3>
+
+                <p class="experience-description">
+                    Collaborated with the team to develop and
+                    maintain responsive frontend features for
+                    web applications. Utilized HTML, CSS and
+                    JavaScript to create dynamic user interfaces,
+                    with attention to cross-browser compatibility
+                    and performance.
+                </p>
+
+                <div class="experience-tags">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Responsive UI</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- EXPERIENCE 03 -->
+
+        <article class="experience-item">
+
+            <div class="experience-meta">
+
+                <span class="experience-number">
+                    03
+                </span>
+
+                <span class="experience-date">
+                    SEP — DEC 2024
+                </span>
+
+            </div>
+
+
+            <div class="experience-content">
+
+                <p class="experience-company">
+                    ZIDIO DEVELOPMENT
+                </p>
+
+                <h3>
+                    Full Stack Developer
+                </h3>
+
+                <p class="experience-description">
+                    Acquired practical knowledge of Git and GitHub
+                    for version control and collaborative development.
+                    Worked with backend development concepts and
+                    MongoDB, while collaborating on web application
+                    features and frontend-backend integration.
+                </p>
+
+                <div class="experience-tags">
+
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>MongoDB</span>
+                    <span>Backend</span>
+                    <span>Full Stack</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- TECH STACK -->
+
+<section class="stack-section" id="stack">
+
+    <div class="stack-header">
+
+        <div>
+
+            <p class="section-number">
+                04 / TECH STACK
+            </p>
+
+            <h2>
+                TOOLS I
+                <span>BUILD WITH.</span>
+            </h2>
+
+        </div>
+
+        <p class="stack-intro">
+            Technologies and tools I use while building
+            responsive interfaces, web applications and
+            backend systems.
+        </p>
+
+    </div>
+
+
+    <div class="stack-main">
+
+
+        <!-- FRONTEND -->
+
+        <div class="stack-category">
+
+            <div class="stack-category-number">
+                01
+            </div>
+
+            <div class="stack-category-content">
+
+                <p class="stack-category-label">
+                    FRONTEND
+                </p>
+
+                <div class="stack-items">
+
+                    <div class="stack-item">
+                        <span class="stack-icon">JS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="stack-item">
+                        <span class="stack-icon">R</span>
+                        <span>React.js</span>
+                    </div>
+
+                    <div class="stack-item">
+                        <span class="stack-icon">HT</span>
+                        <span>HTML5</span>
+                    </div>
+
+                    <div class="stack-item">
+                        <span class="stack-icon">CS</span>
+                        <span>CSS3</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BACKEND -->
+
+        <div class="stack-category">
+
+            <div class="stack-category-number">
+                02
+            </div>
+
+            <div class="stack-category-content">
+
+                <p class="stack-category-label">
+                    BACKEND
+                </p>
+
+                <div class="stack-items">
+
+                    <div class="stack-item">
+                        <span class="stack-icon">N</span>
+                        <span>Node.js</span>
+                    </div>
+
+                    <div class="stack-item">
+                        <span class="stack-icon">EX</span>
+                        <span>Express.js</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- DATABASE -->
+
+        <div class="stack-category">
+
+            <div class="stack-category-number">
+                03
+            </div>
+
+            <div class="stack-category-content">
+
+                <p class="stack-category-label">
+                    DATABASE
+                </p>
+
+                <div class="stack-items">
+
+                    <div class="stack-item">
+                        <span class="stack-icon">M</span>
+                        <span>MongoDB</span>
+                    </div>
+
+                    <div class="stack-item">
+                        <span class="stack-icon">SQL</span>
+                        <span>MySQL</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOOLS -->
+
+        <div class="stack-category">
+
+            <div class="stack-category-number">
+                04
+            </div>
+
+            <div class="stack-category-content">
+
+                <p class="stack-category-label">
+                    TOOLS & WORKFLOW
+                </p>
+
+                <div class="stack-items">
+
+                    <div class="stack-item">
+                        <span class="stack-icon">GH</span>
+                        <span>GitHub</span>
+                    </div>
+
+                    <div class="stack-item">
+                        <span class="stack-icon">VS</span>
+                        <span>Visual Studio</span>
+                    </div>
+
+                    <div class="stack-item">
+                        <span class="stack-icon">FG</span>
+                        <span>Figma</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- SECONDARY SKILLS -->
+
+    <div class="secondary-stack">
+
+        <p>
+            ALSO FAMILIAR WITH
+        </p>
+
+        <div class="secondary-items">
+
+            <span>Java</span>
+            <span>C</span>
+            <span>C++</span>
+            <span>Bootstrap</span>
+            <span>WordPress</span>
+            <span>WooCommerce</span>
+            <span>Elementor</span>
+            <span>Hostinger</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- CURRENTLY -->
+
+
+<section class="currently-section" id="currently">
+
+    <div class="currently-header">
+
+        <p class="section-number">
+            05 / CURRENTLY
+        </p>
+
+        <h2>
+            WHAT I'M
+            <span>UP TO.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="currently-grid">
+
+
+        <div class="currently-card">
+
+            <span class="currently-number">
+                01
+            </span>
+
+            <p class="currently-label">
+                BUILDING
+            </p>
+
+            <h3>
+                Web Applications
+            </h3>
+
+            <p>
+                Building responsive and user-friendly
+                web experiences.
+            </p>
+
+        </div>
+
+
+        <div class="currently-card">
+
+            <span class="currently-number">
+                02
+            </span>
+
+            <p class="currently-label">
+                FOCUSING ON
+            </p>
+
+            <h3>
+                JavaScript · React
+            </h3>
+
+            <p>
+                Strengthening frontend and full-stack
+                development skills.
+            </p>
+
+        </div>
+
+
+        <div class="currently-card">
+
+            <span class="currently-number">
+                03
+            </span>
+
+            <p class="currently-label">
+                WORKING WITH
+            </p>
+
+            <h3>
+                Node.js · MongoDB
+            </h3>
+
+            <p>
+                Exploring backend systems, APIs
+                and database-driven applications.
+            </p>
+
+        </div>
+
+
+        <div class="currently-card">
+
+            <span class="currently-number">
+                04
+            </span>
+
+            <p class="currently-label">
+                DIRECTION
+            </p>
+
+            <h3>
+                Full-Stack Development
+            </h3>
+
+            <p>
+                Continuing to grow through practical
+                projects and development work.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
+
+
+
+
+<section class="contact-section" id="contact">
+
+    <div class="contact-inner">
+
+        <p class="section-number">
+            06 / CONTACT
+        </p>
+
+
+        <h2>
+            HAVE A PROJECT
+            <span>IN MIND?</span>
+        </h2>
+
+
+        <p class="contact-description">
+            I'm open to discussing development opportunities,
+            interesting projects and collaborations.
+        </p>
+
+
+        <a
+            href="mailto:anasnavsari04@gmail.com"
+            class="contact-email"
+        >
+            anasnavsari04@gmail.com
+            <span>↗</span>
+        </a>
+
+
+        <div class="contact-links">
+
+            <a
+                href="https://github.com/anasnavsari"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub ↗
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/anasnavsari/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn ↗
+            </a>
+
+            <a
+                href="src/Anas Navsari  resume.pdf"
+                download
+            >
+                Download Resume ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+
+    <div class="footer-top">
+
+        <a href="#home" class="footer-logo">
+            ANAS<span>.</span>
+        </a>
+
+        <p>
+            Full-Stack Developer
+        </p>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Anas Navsari
+        </span>
+
+        <span>
+            Built with HTML · CSS · JavaScript
+        </span>
+
+        <a href="#home">
+            Back to top ↑
+        </a>
+
+    
+
+</footer>
+
+
+
+<script>
+    const revealElements = document.querySelectorAll(
+        '.section-header, .work-project, .about-header, .about-grid, .experience-header, .experience-item, .stack-header, .stack-category, .currently-header, .currently-card, .contact-inner, .site-footer'
+    );
+
+    revealElements.forEach((element) => {
+        element.classList.add('reveal');
+    });
+
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+    revealElements.forEach((element) => {
+        revealObserver.observe(element);
+    });
+</script>
+<script>
+    const scrollProgress = document.querySelector('.scroll-progress');
+    const siteNav = document.querySelector('.site-nav');
+
+    window.addEventListener('scroll', () => {
+
+        const scrollTop = window.scrollY;
+        const documentHeight =
+            document.documentElement.scrollHeight - window.innerHeight;
+
+        const progress = documentHeight > 0
+            ? Math.min((scrollTop / documentHeight) * 100, 100)
+            : 0;
+
+        scrollProgress.style.width = `${progress}%`;
+
+        if (scrollTop > 40) {
+            siteNav.classList.add('scrolled');
+        } else {
+            siteNav.classList.remove('scrolled');
+        }
+
+    }, { passive: true });
+</script>
+
+<script>
+    const cursorGlow = document.querySelector('.cursor-glow');
+
+    if (
+        cursorGlow &&
+        window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    ) {
+        window.addEventListener('mousemove', (event) => {
+            cursorGlow.style.transform =
+                `translate(${event.clientX}px, ${event.clientY}px) translate(-50%, -50%)`;
+        }, { passive: true });
+    }
+</script>
 
 
 
